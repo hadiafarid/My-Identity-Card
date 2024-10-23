@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My ID Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .id-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .id-card img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+
+        .id-card h2 {
+            margin: 10px 0;
+            font-size: 24px;
+        }
+
+        .id-card p {
+            color: #666;
+            margin: 5px 0;
+        }
+
+        .id-card .social-links a {
+            display: inline-block;
+            margin: 5px;
+            color: #333;
+            text-decoration: none;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .id-card .social-links a:hover {
+            color: #0077b5;
+        }
+
+        /* Button Style */
+        .show-info {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #0077b5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .show-info:hover {
+            background-color: #005f8c;
+        }
+
+        /* Hidden Info */
+        .extra-info {
+            display: none;
+            text-align: left;
+            margin-top: 15px;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .extra-info p {
+            margin: 5px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="id-card">
+        <img src="c:\Users\hc\OneDrive\Desktop\WhatsApp Image 2024-03-27 at 9.41.35 AM.jpeg" alt="My Image">
+        <h2>Hadiya Farid</h2>
+        <p>Web Developer</p>
+        <p>Location: Karachi</p>
+
+        <div class="social-links">
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a> |
+            <a href="https://github.com" target="_blank">GitHub</a>
+        </div>
+
+        <button class="show-info" onclick="toggleInfo()">More Info</button>
+
+        <div class="extra-info" id="extraInfo">
+            <p><strong>Email:</strong> hadiyafarid82006@gmail.com</p>
+            <p><strong>Skills:</strong> HTML, CSS, JavaScript</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleInfo() {
+            var info = document.getElementById("extraInfo");
+            if (info.style.display === "block") {
+                info.style.display = "none";
+            } else {
+                info.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
